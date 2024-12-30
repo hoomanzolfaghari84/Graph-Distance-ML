@@ -1,0 +1,28 @@
+Dataset: PROTEINS
+Best Validation Accuracy: {'Metric': 0.9, 'Readout': 1.0}
+Test Accuracy: {'Metric': 0.6, 'Readout': 0.5}
+Median Time per Epoch: {'Metric': 59.060794830322266, 'Readout': 0.13803315162658691}
+Epoch: 000, Model: Metric: Train loss: 0.2958 Val Acc: 0.0000, Test Acc: 0.0000 Median time: 62.1960s
+Epoch: 000, Model: Readout: Train loss: 0.0175 Val Acc: 0.7000, Test Acc: 0.6000 Median time: 0.1860s
+Epoch: 001, Model: Metric: Train loss: 0.3194 Val Acc: 0.0000, Test Acc: 0.0000 Median time: 61.2140s
+Epoch: 001, Model: Readout: Train loss: 0.0167 Val Acc: 0.7000, Test Acc: 0.6000 Median time: 0.1415s
+Epoch: 002, Model: Metric: Train loss: 0.2790 Val Acc: 0.0000, Test Acc: 0.0000 Median time: 61.2140s
+Epoch: 002, Model: Readout: Train loss: 0.0164 Val Acc: 0.8000, Test Acc: 0.6000 Median time: 0.1657s
+Epoch: 003, Model: Metric: Train loss: 0.2943 Val Acc: 0.0000, Test Acc: 0.0000 Median time: 59.5525s
+Epoch: 003, Model: Readout: Train loss: 0.0159 Val Acc: 1.0000, Test Acc: 0.5000 Median time: 0.1657s
+Epoch: 004, Model: Metric: Train loss: 0.2869 Val Acc: 0.0000, Test Acc: 0.0000 Median time: 59.5525s
+Epoch: 004, Model: Readout: Train loss: 0.0157 Val Acc: 1.0000, Test Acc: 0.5000 Median time: 0.1657s
+Epoch: 005, Model: Metric: Train loss: 0.2856 Val Acc: 0.0000, Test Acc: 0.0000 Median time: 59.5525s
+Epoch: 005, Model: Readout: Train loss: 0.0153 Val Acc: 1.0000, Test Acc: 0.5000 Median time: 0.1415s
+Epoch: 006, Model: Metric: Train loss: 0.2754 Val Acc: 0.0000, Test Acc: 0.0000 Median time: 61.2140s
+Epoch: 006, Model: Readout: Train loss: 0.0148 Val Acc: 1.0000, Test Acc: 0.5000 Median time: 0.1415s
+Epoch: 007, Model: Metric: Train loss: 0.0173 Val Acc: 0.7000, Test Acc: 0.6000 Median time: 59.5525s
+Epoch: 007, Model: Readout: Train loss: 0.0144 Val Acc: 0.8000, Test Acc: 0.5000 Median time: 0.1380s
+Epoch: 008, Model: Metric: Train loss: 0.0170 Val Acc: 0.7000, Test Acc: 0.6000 Median time: 59.5525s
+Epoch: 008, Model: Readout: Train loss: 0.0140 Val Acc: 0.8000, Test Acc: 0.5000 Median time: 0.1380s
+Epoch: 009, Model: Metric: Train loss: 0.0166 Val Acc: 0.7000, Test Acc: 0.6000 Median time: 59.4748s
+Epoch: 009, Model: Readout: Train loss: 0.0132 Val Acc: 0.8000, Test Acc: 0.5000 Median time: 0.1380s
+Epoch: 010, Model: Metric: Train loss: 0.0163 Val Acc: 0.9000, Test Acc: 0.6000 Median time: 59.4748s
+Epoch: 010, Model: Readout: Train loss: 0.0129 Val Acc: 0.8000, Test Acc: 0.5000 Median time: 0.1381s
+Epoch: 011, Model: Metric: Train loss: 0.0161 Val Acc: 0.9000, Test Acc: 0.6000 Median time: 59.0608s
+Epoch: 011, Model: Readout: Train loss: 0.0140 Val Acc: 0.7000, Test Acc: 0.5000 Median time: 0.1380s
