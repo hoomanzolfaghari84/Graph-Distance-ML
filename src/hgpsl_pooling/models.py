@@ -7,9 +7,9 @@ import asyncio
 import gc
 
 import torch
-from torch.profiler import profile as tprofile
+# from torch.profiler import profile as tprofile
 import torch.nn.functional as F
-from memory_profiler import profile
+# from memory_profiler import profile
 from torch_geometric.data import Batch, Data
 from torch_geometric.nn import global_mean_pool as gap, global_max_pool as gmp
 from torch_geometric.nn.conv import GCNConv
