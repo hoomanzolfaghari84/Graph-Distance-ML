@@ -300,9 +300,11 @@ class MCS_HGPSL(torch.nn.Module):
                     graph1 = data_list[i]
                     graph2 = data_list[j]
 
-                    distance = compute_distance_with_timeout(
-                        graph1, graph2, self.get_lam(), self.distance_func, self.dist_comp_timeout
-                    )
+                    distance = self.distance_func(graph1[0], graph1[1], graph2[0], graph2[1], self.get_lam())
+
+                    # distance = compute_distance_with_timeout(
+                    #     graph1, graph2, self.get_lam(), self.distance_func, self.dist_comp_timeout
+                    # )
                     if distance == -1:
                         distance = 0
                         patience -= 1
