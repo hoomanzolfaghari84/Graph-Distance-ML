@@ -204,6 +204,8 @@ def compute_distance_with_timeout(graph1, graph2, lam, distance_func, timeout):
     except asyncio.TimeoutError:
         # logging.warning(f"distance computation timed out after {timeout} seconds")
         return -1
+    except Exception() as e:
+        logging.error(f'error occured during distance computation:\n {e}')
     finally:
         loop.close()  # Ensure the loop is closed
 
@@ -300,11 +302,11 @@ class MCS_HGPSL(torch.nn.Module):
                     graph1 = data_list[i]
                     graph2 = data_list[j]
 
-                    distance = self.distance_func(graph1[0], graph1[1], graph2[0], graph2[1], self.get_lam())
+                    # distance = self.distance_func(graph1[0], graph1[1], graph2[0], graph2[1], self.get_lam())
 
-                    # distance = compute_distance_with_timeout(
-                    #     graph1, graph2, self.get_lam(), self.distance_func, self.dist_comp_timeout
-                    # )
+                    distance = compute_distance_with_timeout(
+                        graph1, graph2, self.get_lam(), self.distance_func, self.dist_comp_timeout
+                    )
                     if distance == -1:
                         distance = 0
                         patience -= 1
