@@ -106,7 +106,7 @@ def run_hgp_sl_experiment(dataset_name,
         tmp.write(f"Val num: {len(val_dataset)}")
         tmp.write(f"Test num: {len(test_dataset)}")
 
-    batch_size = 40
+    batch_size = 80
     train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)#,pin_memory_device=True)
     val_loader = DataLoader(val_dataset, batch_size=batch_size, shuffle=True)
     test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=True)
@@ -153,7 +153,7 @@ def run_hgp_sl_experiment(dataset_name,
     test_acc = {'Metric': 0, 'Readout': 0}
     times = {'Metric': [], 'Readout': []}
     val_accuracies = {'Metric': [], 'Readout': []}
-    num_epochs = 12
+    num_epochs = 16
 
     if pretrain_epoch_num is None:
         pretrain_epoch_num = num_epochs/2
