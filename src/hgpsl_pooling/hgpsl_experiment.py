@@ -81,7 +81,7 @@ def run_hgp_sl_experiment(dataset_name,
     dataset = TUDataset(root='./datasets/PROTEINS', name='PROTEINS', use_node_attr=True,
                         # pre_filter=lambda data: data.num_nodes <= 160,force_reload=True
                         ).shuffle()
-
+    
     
     if train_num is None or val_num is None or test_num is None :   
         train_num = int(len(dataset) * 0.8)
@@ -92,6 +92,21 @@ def run_hgp_sl_experiment(dataset_name,
     dataset_reports_path = os.path.join(root_dir, 'dataset_reports.txt')
     dataset_reports(dataset, path=dataset_reports_path)
 
+    
+    # i = 0
+    # j = 0
+    # for data in dataset:
+    #     if len(data.x) < 10:
+    #         i+=1
+
+    #         if len(data.edge_index[0]) > 20:
+    #             j += 1
+
+    # print(f'more than nodes: {i}')
+    # print(f'more than edge index: {j}')
+
+
+    # return
 
     train_dataset = dataset[:train_num]
     val_dataset = dataset[train_num:train_num + val_num]
@@ -106,7 +121,7 @@ def run_hgp_sl_experiment(dataset_name,
         tmp.write(f"Val num: {len(val_dataset)}")
         tmp.write(f"Test num: {len(test_dataset)}")
 
-    batch_size = 80
+    batch_size = 30
     train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)#,pin_memory_device=True)
     val_loader = DataLoader(val_dataset, batch_size=batch_size, shuffle=True)
     test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=True)
