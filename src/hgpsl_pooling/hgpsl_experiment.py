@@ -10,6 +10,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 from data import dataset_reports, data_dir
+from hgpsl_pooling.graph_clustering import cluster
 from hgpsl_pooling.models import MCS_HGPSL, HPGSL_Original_Model
 
 from hgpsl_pooling.utils import load_model, save_model, save_results_report, save_plot
@@ -82,6 +83,9 @@ def run_hgp_sl_experiment(dataset_name,
                         # pre_filter=lambda data: data.num_nodes <= 160,force_reload=True
                         ).shuffle()
     
+    cluster(dataset)
+    
+    return
     
     if train_num is None or val_num is None or test_num is None :   
         train_num = int(len(dataset) * 0.8)

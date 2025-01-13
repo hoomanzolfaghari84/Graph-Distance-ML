@@ -264,9 +264,10 @@ class MCS_HGPSL(torch.nn.Module):
         num_nodes_Start = len(x)
         num_graphs = batch.max().item() + 1
         x, edge_index, edge_attr, batch, readouts = self.pooling_layer(x, edge_index, batch)
+
         # logging.info("pooling end")
         # print(f'node reductions in batch of lenght {num_graphs}: {num_nodes_Start - len(x)}')
-
+        # TODO
         if (not self.__fine_tuning__):  # and  self.training:
             # Split the pooled batch into individual Data objects
 
@@ -281,18 +282,9 @@ class MCS_HGPSL(torch.nn.Module):
 
             num_graphs = len(data_list)
 
+
             # Initialize an empty distance matrix
             distance_matrix = torch.zeros((num_graphs, num_graphs), device=x.device)
-
-            # # Helper function to wrap distance_func with timeout
-            # def compute_distance_with_timeout(graph1, graph2, lam):
-            #     with ThreadPoolExecutor(max_workers=1) as executor:
-            #         future = executor.submit(self.distance_func, graph1[0], graph1[1], graph2[0], graph2[1], lam)
-            #         try:
-            #             return future.result(timeout=self.dist_comp_timeout)  # dist_comp_timeout seconds timeout
-            #         except  TimeoutError:
-            #             logging.warning(f"distance computation timed out of {self.dist_comp_timeout}s - num_nodes= {len(graph1[0])},{len(graph2[0])} - num_edges = {len(graph1[1][0])},{len(graph2[1][0])}")
-            #             return 0
 
             # Compute pairwise distances using the custom distance function
             for i in range(num_graphs):

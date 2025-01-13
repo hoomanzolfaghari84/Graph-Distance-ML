@@ -23,11 +23,11 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(
         description="This program runs our graph machine learning experiments"
     )
-    parser.add_argument("--exp_name", required=True, type=str, default='mcs_pooling') # options: knn, mcs_pooling, mcs_convolution
-    parser.add_argument("--dataset_name", required=True, type=str, default='PROTEINS')
-    parser.add_argument("--train_num", required=True, type=int, default=300)
-    parser.add_argument("--val_num", required=True, type=int, default=100)
-    parser.add_argument("--test_num", required=True, type=int, default=100)
+    parser.add_argument("--exp_name", required=True, type=str, default='hgpsl_pooling') # options: knn, mcs_pooling, mcs_convolution
+    parser.add_argument("--dataset_name", required=False, type=str, default='PROTEINS')
+    parser.add_argument("--train_num", required=False, type=int, default=300)
+    parser.add_argument("--val_num", required=False, type=int, default=100)
+    parser.add_argument("--test_num", required=False, type=int, default=100)
 
     parser.add_argument("--workers_num", required=False, type=int, default=4)
     parser.add_argument("--each_class_train", required=False, type=int, default=10)
