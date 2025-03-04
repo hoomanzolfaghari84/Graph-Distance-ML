@@ -1,0 +1,4 @@
+2025-03-02 12:25:52,835 - INFO - Starting experiment: cluster_dataset_20250302_122552
+2025-03-02 12:25:54,020 - INFO - Dataset size: 1113, Train: 890, Val: 111, Test: 112
+2025-03-02 12:25:54,020 - INFO - Device: cpu
+2025-03-02 12:25:54,174 - INFO - Starting Epoch 1/10
