@@ -1,0 +1,10 @@
+Dataset: PROTEINS(1113)
+====================
+Number of graphs: 1113
+Number of features: 4
+Number of classes: 2
+First graph details: Data(edge_index=[2, 76], x=[22, 4], y=[1])
+Average number of nodes: 39.05750224618149
+Average number of edges: 145.6316262353998
+Average node features: tensor([8.1441, 0.4899, 0.4818, 0.0283])
+Class frequency: {1: 450, 0: 663}

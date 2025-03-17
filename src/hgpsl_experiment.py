@@ -54,7 +54,6 @@ def run_hgpsl_experiment(dataset_name,
     output_dir.mkdir(parents=True, exist_ok=True)
 
 
-
     # Setup logging
     setup_logging(output_dir)
     logging.info(f"Starting experiment: {run_name}")
@@ -98,7 +97,7 @@ def run_hgpsl_experiment(dataset_name,
 
     train_loaders = []
     train_dict = {}
-    for i, data in enumerate(train_dataset):
+    for data, i in zip(train_dataset, cluster_labels):
         if not i in train_dict.keys():
             train_dict[i] = []
         train_dict[i].append(data)
